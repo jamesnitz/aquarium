@@ -1,0 +1,26 @@
+@import '/styles/nav.css';
+
+body{
+background: url(/css/beach.jpg)
+}
+
+.tips{
+  border: 2px solid blue;
+  border-radius: 25px;
+}
+
+.locations{
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  border: 2px solid blue;
+  border-radius: 40px;
+}
+
+.info{
+  display: flex;
+  justify-content: space-evenly;
+  
+}
+
+

@@ -1,6 +1,7 @@
 const initializeDetailButtonEventsLocation = () => {
   // CAN'T TOUCH THIS - START
   const allCloseButtons = document.querySelectorAll(".button--close")
+ 
 
   for (const btn of allCloseButtons) {
       btn.addEventListener(
@@ -11,52 +12,20 @@ const initializeDetailButtonEventsLocation = () => {
           }
       )
   }
-  // CAN'T TOUCH THIS - END
 
+    // Get a reference to all buttons that start with "button--"
+    const allDetailButtons = document.querySelectorAll("button[id^='button--']")
 
-  // You will be writing code below this line
-
-  // Show bubbles' details when the button is clicked}
-  document.querySelector("#button--cancun").addEventListener(
-      "click",
-      theClickEvent => {
-          const theDialog = document.querySelector("#details--cancun")
-          theDialog.showModal()
-      }
-  )
-  // Show bubbles' details when the button is clicked}
-  document.querySelector("#button--southAfrica").addEventListener(
-      "click",
-      theClickEvent => {
-          const theDialog = document.querySelector("#details--southAfrica")
-          theDialog.showModal()
-      }
-  )
-  // Show bubbles' details when the button is clicked}
-  document.querySelector("#button--atlantic").addEventListener(
-      "click",
-      theClickEvent => {
-          const theDialog = document.querySelector("#details--atlantic")
-          theDialog.showModal()
-      }
-  )
-  // Show bubbles' details when the button is clicked}
-  document.querySelector("#button--pacific").addEventListener(
-      "click",
-      theClickEvent => {
-          const theDialog = document.querySelector("#details--pacific")
-          theDialog.showModal()
-      }
-  )
-  // Show bubbles' details when the button is clicked}
-  document.querySelector("#button--river").addEventListener(
-      "click",
-      theClickEvent => {
-          const theDialog = document.querySelector("#details--river")
-          theDialog.showModal()
-      }
-  )
-
+    // Add an event listener to each one
+    for (const btn of allDetailButtons) {
+        btn.addEventListener(
+            "click",
+            theEvent => {
+                const dialogSiblingSelector = `#${theEvent.target.id}+dialog`
+                const theDialog = document.querySelector(dialogSiblingSelector)
+                theDialog.showModal()
+            }
+        )
     }
-
+}
     export default initializeDetailButtonEventsLocation

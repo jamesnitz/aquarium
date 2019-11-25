@@ -1,2 +1,7 @@
 import initializeDetailButtonEventsLocation from './dialogsLocation.js'
-initializeDetailButtonEventsLocation()
+import {useLocation } from './Locations/LocationDataProvider.js'
+import LocationListComponent from './Locations/LocationList.js'
+
+LocationListComponent()
+
+// initializeDetailButtonEventsLocation()

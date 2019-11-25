@@ -1,49 +1,49 @@
 const fishCollection = [
   {
-      name: "Mr. Bubbles",
-      type: "Goldfish",
+      name: "Bubbles",
+      species: "Goldfish",
       length: "2cm",
-      diet: "flakes",
+      food: ["flakes", "plankton"],
       location: "fishbowl",
       image: "./css/goldie-fish.jpg"
   },
   {
     name: "Bruce",
-    type: "Great White Shark",
+    species: "Great White Shark",
     length: "25 feet",
-    diet: "humans",
+    food: ["people", "tires"],
     location: "beaches of New Jersey",
     image: "./css/bruce.gif"
   },
   {
     name: "Marlin",
-    type: "marlin",
+    species: "marlin",
     length: "10 feet",
-    diet: "fish",
+    food: ["red fish", "blue fish"],
     location: "Atlantic",
     image: "./css/marlin.jpg"
   },
   {
     name: "Cee-Lo-Blue",
-    type: "coelacanth",
+    species: "Coelacanth",
     length: "4 feet",
-    diet: "prehistoric fish",
+    food: ["ancient fish", "prehistoric fish"],
     location: "ancient waters",
     image: "./css/coel.jpg"
   },
   {
-    name: "Big Teef",
-    type: "goliath Tigerfish",
+    name: "Bitey",
+    species: "Goliath Tigerfish",
     length: "6 feet",
-    diet: "small people",
+    food: ["souls", "happiness"],
     location: "Amazon river",
     image: "./css/teef.jpg"
   },
   {
-    name: "Sturgill Sturgeon",
-    type: "Sturgeon",
+    name: "Sturgill",
+    species: "Sturgeon",
     length: "4 feet",
-    diet: "kelp",
+    food: ["small fish", "smaller fish"],
     location: "North American lakes",
     image: "./css/sturg.jpg"
   }

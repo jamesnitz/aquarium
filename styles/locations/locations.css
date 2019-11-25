@@ -1,20 +1,23 @@
 @import '/styles/nav.css';
 
 body{
-background: url(/css/beach.jpg)
+background: url(/css/beach.jpg);
+color: white;
+  text-shadow: black 1px 1px 1px;
 }
 
 .tips{
-  border: 2px solid blue;
   border-radius: 25px;
 }
 
-.locations{
+.locationList{
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
   border: 2px solid blue;
   border-radius: 40px;
+  padding: 20px;
+  text-align: center ;
 }
 
 .info{

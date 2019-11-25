@@ -1,5 +1,5 @@
 const addMouseOverEventListenersAside = () => {
-  const tipCards = document.querySelectorAll(".tip__card")
+  const tipCards = document.querySelectorAll(".tip")
 
   for (const card of tipCards) {
       card.addEventListener(

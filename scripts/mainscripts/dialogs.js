@@ -1,72 +1,26 @@
 const initializeDetailButtonEvents = () => {
-  // CAN'T TOUCH THIS - START
-  const allCloseButtons = document.querySelectorAll(".button--close")
-
-  for (const btn of allCloseButtons) {
-      btn.addEventListener(
-          "click",
-          theEvent => {
-              const dialogElement = theEvent.target.parentNode
-              dialogElement.close()
-          }
-      )
-  }
-  // CAN'T TOUCH THIS - END
-
-
-  // You will be writing code below this line
-
-  // Show bubbles' details when the button is clicked}
-  document.querySelector("#button--bubbles").addEventListener(
-      "click",
-      theClickEvent => {
-          const theDialog = document.querySelector("#details--bubbles")
-          theDialog.showModal()
-      }
-  )
-  // Show Bruce's details when the button is clicked
-  document.querySelector("#button--bruce").addEventListener(
-      "click",
-      theClickEvent => {
-          const theDialog = document.querySelector("#details--bruce")
-          theDialog.showModal()
-      }
-  )
-  // Show Marlins' details when the button is clicked
-  document.querySelector("#button--marlin").addEventListener(
-      "click",
-      theClickEvent => {
-          const theDialog = document.querySelector("#details--marlin")
-          theDialog.showModal()
-      }
-  )
-  // Show Coels' details when the button is clicked
-  document.querySelector("#button--coel").addEventListener(
-      "click",
-      theClickEvent => {
-          const theDialog = document.querySelector("#details--coel")
-          theDialog.showModal()
-      }
-  )
-  // Show Teefs' details when the button is clicked
-  document.querySelector("#button--teef").addEventListener(
-      "click",
-      theClickEvent => {
-          const theDialog = document.querySelector("#details--teef")
-          theDialog.showModal()
-      }
-  )
-  // Show Sturgeon' details when the button is clicked
-  document.querySelector("#button--sturg").addEventListener(
-      "click",
-      theClickEvent => {
-          const theDialog = document.querySelector("#details--sturg")
-          theDialog.showModal()
-      }
-  )
-  
-     
+    // Get a reference to all buttons that start with "button--"
+    const allDetailButtons = document.querySelectorAll("button[id^='button--']")
+    const allCloseButtons = document.querySelectorAll(".button--close")
+    for (const btn of allCloseButtons) {
+        btn.addEventListener(
+            "click",
+            theEvent => {
+                const dialogElement = theEvent.target.parentNode
+                dialogElement.close()
+            }
+        )
+    }
+    // Add an event listener to each one
+    for (const btn of allDetailButtons) {
+        btn.addEventListener(
+            "click",
+            theEvent => {
+                const dialogSiblingSelector = `#${theEvent.target.id}+dialog`
+                const theDialog = document.querySelector(dialogSiblingSelector)
+                theDialog.showModal()
+            }
+        )
+    }
 }
-
 export default initializeDetailButtonEvents
-

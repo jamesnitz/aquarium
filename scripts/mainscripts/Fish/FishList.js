@@ -13,7 +13,7 @@ const FishListComponent = () => {
   const fishes = useFish()
 
   
-
+  
   // Add to the existing HTML in the content element
   contentElement.innerHTML += `
       <section class="fishList">
